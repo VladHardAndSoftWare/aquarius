@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Mermaid-compatible C4 diagram editor with free X/Y positioning and layers",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
