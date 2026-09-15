@@ -128,8 +128,17 @@ The canvas is hand-written SVG — no diagramming library.
 | `npm run preview` | Serve the production build |
 | `npm run typecheck` | `tsc --noEmit` |
 
-The production build sets the base path to `/aquarius/` for GitHub Pages project
-sites. Change `base` in [vite.config.ts](vite.config.ts) if you deploy elsewhere.
+## Deployment
+
+Live at <https://vladhardandsoftware.github.io/aquarius/>.
+
+Every push to `main` runs [.github/workflows/deploy.yml](.github/workflows/deploy.yml),
+which type-checks, builds, and publishes `dist/` to GitHub Pages. No `gh-pages`
+branch is involved — the build artifact is uploaded and served directly.
+
+The production build sets the base path to `/aquarius/` so asset URLs resolve
+under the project-site subpath. Change `base` in [vite.config.ts](vite.config.ts)
+if you deploy somewhere else.
 
 ## Current limits
 
